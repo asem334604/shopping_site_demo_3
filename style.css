@@ -1,0 +1,234 @@
+:root{
+    --main_wrapper_color: #FFFFFF;
+    --secondary_wrapper_color: darkgray;
+    --main_text_color: #000000;
+    --bright_text_color: #FFFFFF;
+}
+
+.wrapper{
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.section001{
+    background-color: var(--main_wrapper_color);
+}
+.header{
+    background-color: var(--secondary_wrapper_color);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+.header h2{
+    color: var(--bright_text_color);
+    flex: 1;
+    margin-left: 50px;
+}
+.header ul{
+    list-style: none;
+    flex: 2;
+}
+.header li{
+    display: inline-block;
+}
+.header li a{
+    color: var(--bright_text_color);
+    text-decoration: none;
+
+}
+.header input{
+    background-color: var(--secondary_wrapper_color);
+    border: var(--bright_text_color) 1px solid;
+    border-radius: 50px;
+    font-size: 14px;
+    padding-left: 10px;
+    height: 40px;
+    flex: 1;
+}
+.header ::placeholder {
+    color: var(--bright_text_color);
+}
+.header img{
+    flex: 1;
+    margin: 0 20px;
+}
+.section002{
+    background-color: var(--main_wrapper_color);
+}
+.description {
+    background-color: var(--main_wrapper_color);
+    width: 450px;
+    margin-left: 50px;
+    display: inline-block;
+
+}
+/*rating radio buttons*/
+.item_rate{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: start;
+}
+.item_rate input{
+    display: none;
+}
+.item_rate label{
+    color: goldenrod;
+    position: relative;
+    cursor: pointer;
+    font-size: 2em;
+
+}
+.item_rate label:before{
+    content: "★";
+    opacity: 0;
+    position: absolute;
+    color: goldenrod;
+}
+.item_rate label:hover:before{
+    opacity: 1;
+}
+.item_rate input:checked + label:before{
+    opacity: 1;
+}
+.item_rate input:checked ~ label:before{
+    opacity: 1;
+}
+
+
+.images{
+    display: inline-block;
+    width: 450px;
+    margin-right: 50px;
+    margin-top: 30px;
+}
+.big_pic{
+    width: 450px;
+    margin-right: 50px;
+    display: inline-block;
+}
+.big_pic img{
+    width: 100%;
+}
+.small_pics{
+    width: 450px;
+    margin-right: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+.small_pics img{
+    width: 105px;
+}
+.select{
+    margin-left: 50px;
+    margin-top: -80px;
+}
+
+/*size selection radio buttons*/
+.size_select, .quantity_select {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+.size_select input, .quantity_select input {
+    display: none;
+}
+.size_select label, .quantity_select label {
+    position: relative;
+    cursor: pointer;
+    margin: 2px;
+
+
+}
+.check_sqare{
+    border: 1px darkgray solid;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 1em;
+    color: darkgray;
+    border-radius: 10px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.size_select label:hover,.quantity_select label:hover{
+    opacity: 1;
+    background-color: gainsboro;
+    color: #FFFFFF;
+    border-radius: 10px;
+}
+.size_select input:checked + label,
+.quantity_select input:checked + label {
+    opacity: 1;
+    background-color: gainsboro;
+    color: #FFFFFF;
+    border-radius: 10px;
+}
+
+
+
+/*medium*/
+@media (min-width: 560px) and (max-width: 959px) {
+    .wrapper{
+        width: 600px;
+    }
+    .header input{
+        display: none;
+    }
+    .header h2{
+        flex-grow: 1.5;
+        font-size: 20px;
+    }
+    .description {
+        width: 600px;
+        margin: 0 auto;
+    }
+    .big_pic{
+        width: 600px;
+        margin: 0 auto;
+    }
+    .small_pics{
+        width: 600px;
+        justify-content: center;
+    }
+    .small_pics img{
+        padding: 0 5px;
+    }
+    .select{
+        margin: 10px 0;
+    }
+}
+/*small*/
+@media (max-width: 559px) {
+    .wrapper{
+        width: 300px;
+    }
+    .header{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .header input{
+        display: none;
+    }
+    .header img{
+        display: none;
+    }
+    .description {
+        width: 300px;
+        margin: 0 auto;
+    }
+    .big_pic{
+        width: 300px;
+        margin: 0 auto;
+    }
+    .small_pics{
+        display: none;
+    }
+    .select{
+        margin: 10px auto;
+    }
+}

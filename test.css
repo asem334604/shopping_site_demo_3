@@ -1,0 +1,27 @@
+:root{
+    --main_wrapper_color: #FFFFFF;
+    --secondary_wrapper_color: darkgray;
+    --main_text_color: #000000;
+    --bright_text_color: #FFFFFF;
+}
+
+.wrapper{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+
+/*medium*/
+@media (min-width: 560px) and (max-width: 959px) {
+    .wrapper{
+        width: 600px;
+    }
+
+    }
+/*small*/
+@media (max-width: 559px) {
+    .wrapper{
+        width: 300px;
+    }
+
+}
